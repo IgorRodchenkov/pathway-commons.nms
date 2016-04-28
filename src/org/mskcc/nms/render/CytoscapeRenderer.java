@@ -120,7 +120,8 @@ public class CytoscapeRenderer {
 	 * @param responseOutputStream OutputStream
      * @throws Exception All Exceptions.
      */
-    public static void renderNeighborhoodMap(HttpServletRequest request, HttpServletResponse response, ServletOutputStream responseOutputStream) throws Exception {
+    public static void renderNeighborhoodMap(HttpServletRequest request, HttpServletResponse response,
+											 ServletOutputStream responseOutputStream) throws Exception {
 
 		log.info("************************ CytoscapeRenderer.renderNeighborhoodMap()");
 
@@ -143,10 +144,12 @@ public class CytoscapeRenderer {
 
 		if (sifFile == null) {
 			if (WIDTH == SVG_WIDTH_SMALL) {
-				writeMapToResponse(new ImageIcon(CytoscapeRenderer.class.getResource("resources/too-many-neighbors-found-thumbnail.png")), SVG_WIDTH_SMALL, SVG_HEIGHT_SMALL, response);
+				writeMapToResponse(new ImageIcon(CytoscapeRenderer.class
+						.getResource("resources/too-many-neighbors-found-thumbnail.png")), SVG_WIDTH_SMALL, SVG_HEIGHT_SMALL, response);
 			}
 			else {
-				writeMapToResponse(new ImageIcon(CytoscapeRenderer.class.getResource("resources/too-many-neighbors-found.png")), SVG_WIDTH_LARGE, SVG_HEIGHT_LARGE, response);
+				writeMapToResponse(new ImageIcon(CytoscapeRenderer.class
+						.getResource("resources/too-many-neighbors-found.png")), SVG_WIDTH_LARGE, SVG_HEIGHT_LARGE, response);
 			}
 			return;
 		}
