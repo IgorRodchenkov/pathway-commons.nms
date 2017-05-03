@@ -1,0 +1,3 @@
+*.owl linguist-vendored
+*.zip linguist-vendored
+testdata/* linguist-vendored
